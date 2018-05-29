@@ -1,8 +1,16 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 const App = () => (
   <div className='app-container'>
+<p>Hello</p>
   </div>
 )
 
-export default App
+const mapStateToProps = (state) => {
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps)(App)

@@ -1,7 +1,8 @@
 import {combineReducers} from 'redux'
 
-import things from './things'
+import {votes, electorates} from './votes'
 
 export default combineReducers({
-  things
+  votes,
+  electorates
 })
