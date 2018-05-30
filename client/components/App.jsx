@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import Party from './Party'
-// import Seats from './Seats'
+import Seats from './Seats'
 
 import {updateVotes, updateElectorates} from '../actions'
 
@@ -14,7 +14,8 @@ const App = (props) => {
       {Object.keys(props.votes).map((party, idx) => {
         return <Party party={party} key={idx} update={props.update} />
       })}
-      {/* <Seats /> */}
+      {/* {props.total === 100 && <Seats />} */}
+      <Seats />
     </div>
   )
 }
@@ -24,7 +25,7 @@ const mapDispatchToProps = (dispatch) => {
     update: (type, party, data) => {
       type === 'checkbox'
         ? dispatch(updateElectorates(party, data))
-        : dispatch(updateVotes(party, data))
+        : dispatch(updateVotes(party, Number(data)))
     }
   }
 }
