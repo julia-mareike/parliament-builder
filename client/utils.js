@@ -31,9 +31,9 @@ export function createVoteObject (obj) {
   return array
 }
 
-export function calculateVotes (electorates, rawVotes) {
+export function calculateVotes (electorates, votes) {
   const overhang = []
-
+  const rawVotes = Object.assign({}, votes)
   for (let party in rawVotes) {
     rawVotes[party] < 5 
     ? (!electorates[party] 

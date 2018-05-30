@@ -13,7 +13,7 @@ const Party = (props) => {
       <input type='checkbox' name={props.party} checked={props.electorates[props.party]} onChange={handleChange}/>
       {props.party}: {props.votes[props.party]}
       <br />
-      <input type='range' min='0' max='100' step='0.1' name={props.party} value={props.votes[props.party]} onChange={handleChange}/>
+      <input type='range' min='0' max='100' step='0.1' name={props.party} defaultValue={props.votes[props.party]} onChange={handleChange}/>
     </div>
   )
 }
