@@ -33,7 +33,9 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "chart.js": "^2.7.2",
     "express": "^4.16.2",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
+    "react-chartjs-2": "^2.7.2"
   }
 }
