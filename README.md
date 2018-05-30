@@ -1,1 +1,1 @@
-# React-redux boilerplate
+# Parliament seat allocation 

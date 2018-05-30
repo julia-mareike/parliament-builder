@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-boilerplate",
+  "name": "parliament-builder",
   "version": "0.1.0",
-  "description": "React Redux using express",
+  "description": "Parliament seat allocation",
   "main": "server/index.js",
   "scripts": {
     "start": "webpack && node server",
