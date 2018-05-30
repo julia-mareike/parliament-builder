@@ -25,6 +25,7 @@ const Seats = props => {
   }
   return (
     <div>
+      <Doughnut data={data}/>
       <ul>
         {allocations.map((party, idx) => {
           return <li key={idx} className='seats'>
@@ -32,7 +33,6 @@ const Seats = props => {
           </li>
         })}
       </ul>
-      <Doughnut data={data}/>
     </div>
   )
 }
