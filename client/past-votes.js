@@ -1,28 +1,28 @@
 export const pastVotes = {
   votes: {
-    national: 44.4,
-    labour: 36.9,
-    greens: 6.3,
-    nzFirst: 7.2,
-    māori: 1.2,
+    National: 44.4,
+    Labour: 36.9,
+    Greens: 6.3,
+    NZFirst: 7.2,
+    Māori: 1.2,
     ACT: 0.5,
     TOP: 2.4,
-    mana: 0.1,
-    unitedFuture: 0.1,
-    legalise: 0.3,
-    other: 0.6
+    Mana: 0.1,
+    UnitedFuture: 0.1,
+    Legalise: 0.3,
+    Other: 0.6
   },
   electorates: {
-    national: true,
-    labour: true,
-    greens: true,
-    nzFirst: false,
-    māori: false,
+    National: true,
+    Labour: true,
+    Greens: true,
+    NZFirst: false,
+    Māori: false,
     ACT: true,
     TOP: false,
-    mana: false,
-    unitedFuture: false,
-    legalise: false,
-    other: false
+    Mana: false,
+    UnitedFuture: false,
+    Legalise: false,
+    Other: false
   }
 }
