@@ -9,7 +9,7 @@ const allocations = saintLague(totals)
   return (
     <ul>
       {allocations.map((party, idx) => {
-        return <li key={idx}>
+        return <li key={idx} className='seats'>
           {party.party}: {party.allocated}
         </li>
       })}

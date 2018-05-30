@@ -11,11 +11,11 @@ const App = (props) => {
 const percentage = sum(Object.values(props.votes)).toFixed(1)
   return (
     <div className='app-container'>
-      <p>Hello</p>
+      <p>NZ parliament seat allocation</p>
+      {percentage}%
       {Object.keys(props.votes).map((party, idx) => {
         return <Party party={party} key={idx} update={props.update} />
       })}
-      {percentage}%
       {(Number(percentage) <= 100) && <Seats />}
       {/* <Seats /> */}
     </div>
