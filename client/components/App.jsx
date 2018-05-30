@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {sum} from 'lodash'
 
 import Party from './Party'
 import Seats from './Seats'
@@ -7,15 +8,16 @@ import Seats from './Seats'
 import {updateVotes, updateElectorates} from '../actions'
 
 const App = (props) => {
-
+const percentage = sum(Object.values(props.votes)).toFixed(1)
   return (
     <div className='app-container'>
       <p>Hello</p>
       {Object.keys(props.votes).map((party, idx) => {
         return <Party party={party} key={idx} update={props.update} />
       })}
-      {/* {props.total === 100 && <Seats />} */}
-      <Seats />
+      {percentage}%
+      {(Number(percentage) <= 100) && <Seats />}
+      {/* <Seats /> */}
     </div>
   )
 }
