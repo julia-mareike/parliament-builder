@@ -6,11 +6,8 @@ import Party from './Party'
 import Seats from './Seats'
 
 import {updateVotes, updateElectorates} from '../actions'
-// import {saintLague, calculateVotes} from '../utils'
 
 const App = (props) => {
-  // const totals = calculateVotes(props.electorates, props.votes)
-  // const allocations = saintLague(totals)
   const percentage = sum(Object.values(props.votes)).toFixed(1)
   return (
     <div className='app-container'>
