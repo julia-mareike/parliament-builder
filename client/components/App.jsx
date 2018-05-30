@@ -6,9 +6,12 @@ import Party from './Party'
 import Seats from './Seats'
 
 import {updateVotes, updateElectorates} from '../actions'
+// import {saintLague, calculateVotes} from '../utils'
 
 const App = (props) => {
-const percentage = sum(Object.values(props.votes)).toFixed(1)
+  // const totals = calculateVotes(props.electorates, props.votes)
+  // const allocations = saintLague(totals)
+  const percentage = sum(Object.values(props.votes)).toFixed(1)
   return (
     <div className='app-container'>
       <p>NZ parliament seat allocation</p>
@@ -17,7 +20,6 @@ const percentage = sum(Object.values(props.votes)).toFixed(1)
         return <Party party={party} key={idx} update={props.update} />
       })}
       {(Number(percentage) <= 100) && <Seats />}
-      {/* <Seats /> */}
     </div>
   )
 }

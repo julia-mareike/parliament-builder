@@ -17,7 +17,7 @@ export function adjustVotes (list) {
 export function createVoteObject (obj) {
   const array = []
   forEach(obj, (votes, party) => {
-    // if (votes > 0) {
+    if (votes > 0) {
       const newObject = {
         party: party,
         votes: votes,
@@ -26,7 +26,7 @@ export function createVoteObject (obj) {
         overhang: false
       }
       array.push(newObject)
-    // }
+    }
   })
   return array
 }
