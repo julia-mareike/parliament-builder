@@ -2,14 +2,8 @@ import {pastVotes} from '../past-votes'
 
 export const votes = (state = pastVotes.votes, action) => {
   switch (action.type) {
-    case 'ADD_THING':
-      return [
-        ...state,
-        {
-          thing: action.thing
-        }
-      ]
-
+    case 'UPDATE_VOTES':
+      return {...state, [action.party]: action.votes}
     default:
       return state
   }
@@ -17,13 +11,8 @@ export const votes = (state = pastVotes.votes, action) => {
 
 export const electorates = (state = pastVotes.electorates, action) => {
   switch (action.type) {
-    case '___':
-      return [
-        ...state,
-        {
-          thing: action.thing
-        }
-      ]
+    case 'UPDATE_ELECTORATES':
+      return {...state, [action.party]: action.electorates}
     default:
       return state
   }

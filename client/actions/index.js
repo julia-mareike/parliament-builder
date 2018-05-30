@@ -1,6 +1,15 @@
-export const doAction = (thing) => {
+export const updateVotes = (party, votes) => {
   return {
-    type: 'ADD_THING',
-    thing: thing
+    type: 'UPDATE_VOTES',
+    party,
+    votes
+  }
+}
+
+export const updateElectorates = (party, electorates) => {
+  return {
+    type: 'UPDATE_ELECTORATES',
+    party,
+    electorates
   }
 }

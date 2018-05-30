@@ -1,16 +1,39 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-const App = () => (
-  <div className='app-container'>
-<p>Hello</p>
-  </div>
-)
+import Party from './Party'
+// import Seats from './Seats'
 
-const mapStateToProps = (state) => {
+import {updateVotes, updateElectorates} from '../actions'
+
+const App = (props) => {
+
+  return (
+    <div className='app-container'>
+      <p>Hello</p>
+      {Object.keys(props.votes).map((party, idx) => {
+        return <Party party={party} key={idx} update={props.update} />
+      })}
+      {/* <Seats /> */}
+    </div>
+  )
+}
+
+const mapDispatchToProps = (dispatch) => {
   return {
-
+    update: (type, party, data) => {
+      type === 'checkbox'
+        ? dispatch(updateElectorates(party, data))
+        : dispatch(updateVotes(party, data))
+    }
   }
 }
 
-export default connect(mapStateToProps)(App)
+const mapStateToProps = (state) => {
+  return {
+    votes: state.votes,
+    electorates: state.electorates
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
